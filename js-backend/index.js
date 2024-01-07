@@ -1,7 +1,8 @@
 const express = require("express");
+require("dotenv").config();
 const path = require("path");
 const api = express();
-const port = 4001;
+const port = process.env.PORT;
 const pathPublic = path.join(__dirname, "../public");
 
 // Public Directory
