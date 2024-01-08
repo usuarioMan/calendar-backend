@@ -8,7 +8,10 @@ const pathPublic = path.join(__dirname, "../public");
 // Public Directory
 api.use(express.static(pathPublic));
 
-//Set Routes
+// Middleware to parse JSON requests.
+api.use(express.json());
+
+//Middleware to set Router.
 api.use("/api/auth", require("./routes/auth"));
 
 //  Start the server.
