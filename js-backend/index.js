@@ -8,12 +8,8 @@ const pathPublic = path.join(__dirname, "../public");
 // Public Directory
 api.use(express.static(pathPublic));
 
-api.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-api.get("/pote", (req, res) => {
-  res.send("Hello World!");
-});
+//Set Routes
+api.use("/api/auth", require("./routes/auth"));
 
 //  Start the server.
 api.listen(port, () => {
