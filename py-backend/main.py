@@ -23,4 +23,4 @@ if __name__ == "__main__":
     load_dotenv()
     host = os.environ.get("HOST")
     port = int(os.environ.get("PORT"))
-    uvicorn.run("main:api", host=host, port=port, log_level="info", reload=True, debug=True)
+    uvicorn.run("main:api", host=host, port=port, log_level="info", reload=True)
