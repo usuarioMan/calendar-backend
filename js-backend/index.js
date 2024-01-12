@@ -1,9 +1,13 @@
 const express = require("express");
 require("dotenv").config();
+const { connectDatabase } = require("./database/config");
 const path = require("path");
 const api = express();
 const port = process.env.PORT;
 const pathPublic = path.join(__dirname, "../public");
+
+// Database connection.
+connectDatabase();
 
 // Public Directory
 api.use(express.static(pathPublic));
